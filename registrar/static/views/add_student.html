@@ -1,0 +1,22 @@
+<h1>Add new student</h1>
+
+<form ng-submit="submitForm()">
+    <div>
+        First Name: <input type="text" ng-model="student.first_name">
+    </div>
+
+    <div>
+        Last Name: <input type="text" ng-model="student.last_name">
+        <!--  "last_name" for example links directly to the key in the json object, this is passed via $scope -->
+
+    </div>
+
+    <!--we need a class as it is required in our form-->
+    <div>
+        Class: <select ng-model="student.klass" ng-options="class.resource_uri as class.title for class in classes"></select>
+   <!--   "klass" for example links directly to the key in the json object, this is passed via $scope -->
+    </div>
+
+    <input type="submit" value="Add Student">
+
+</form>

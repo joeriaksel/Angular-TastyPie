@@ -1,0 +1,40 @@
+<h1>My lists</h1>
+
+<a href="#/add/student/">Add new student</a>
+<a href="#/add/project/">Add new project</a>
+
+
+<h2>Combined list</h2>
+
+<ul ng-repeat="student in students">
+
+   <li><a href="#/student/{{ student.id }}">{{  student.first_name }} {{  student.last_name }}</a>
+
+    <br>
+<div ng-show="student.projects"><i>Projects:</i></li>
+   <ul ng-repeat="project in student.projects">
+   <li> {{  project.name }} </li>
+
+    </ul>
+
+   </li>
+
+</ul>
+
+{##}
+{##}
+{#<h2>Project list</h2>#}
+{#<ul ng-repeat="project in projects">#}
+{##}
+{#   <li> {{  project.name }} -  {{  project.student.first_name }} {{  project.student.last_name }} </li>#}
+{##}
+{#</ul>#}
+{##}
+{#<br>#}
+{#<h2>Student list</h2>#}
+{#<ul ng-repeat="student in students">#}
+{##}
+{#   <li> {{  student.first_name }} {{  student.last_name }} </li>#}
+{##}
+{#</ul>#}
+{##}
